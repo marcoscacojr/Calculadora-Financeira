@@ -5,14 +5,9 @@ Uma aplicação web interativa desenvolvida em Python com Streamlit para auxilia
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.31.0-red.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Ativo-success.svg)
-
 Uma aplicação web interativa desenvolvida em Python com Streamlit para auxiliar no planejamento financeiro pessoal, oferecendo 4 calculadoras especializadas com visualizações gráficas avançadas.
 
-[Sobre](#-sobre) • [Funcionalidades](#-funcionalidades) • [Tecnologias](#-tecnologias) • [Instalação](#-instalação) • [Uso](#-como-usar) • [Screenshots](#-screenshots) • [Contribuindo](#-contribuindo)
+[Sobre](#-sobre) • [Funcionalidades](#-funcionalidades) • [Tecnologias](#-tecnologias) • [Instalação](#-instalação) 
 
 </div>
 
@@ -20,9 +15,7 @@ Uma aplicação web interativa desenvolvida em Python com Streamlit para auxilia
 
 ## 📋 Sobre
 
-Esta aplicação foi desenvolvida para democratizar o acesso a ferramentas de planejamento financeiro, permitindo que qualquer pessoa possa simular cenários de investimentos, empréstimos, aposentadoria e independência financeira de forma visual e intuitiva.
-
-O projeto utiliza cálculos financeiros precisos e apresenta os resultados através de gráficos interativos, tabelas detalhadas e métricas relevantes para tomada de decisão.
+Ferramenta de planejamento financeiro que oferece simulações de investimentos, empréstimos, aposentadoria e independência financeira. Os resultados são apresentados através de gráficos interativos, tabelas detalhadas e métricas práticas para auxiliar na tomada de decisão.
 
 ## ✨ Funcionalidades
 
@@ -84,22 +77,32 @@ O projeto utiliza cálculos financeiros precisos e apresenta os resultados atrav
 
 ### Passo a passo
 
-1. **Clone o repositório**
-```bash
+1. Clone o repositório
+~~~bash
 git clone https://github.com/marcoscacojr/Calculadora-Financeira.git
 cd Calculadora-Financeira
+~~~
 
-2. **Crie um ambiente virtual**
-# Windows
+2. Crie um ambiente virtual
+
+**Windows**
+~~~bash
 python -m venv venv
 venv\Scripts\activate
+~~~
 
-# Linux/Mac
+**Linux / Mac**
+~~~bash
 python3 -m venv venv
 source venv/bin/activate
+~~~
 
-3. **Instale as dependências**
+3. Instale as dependências
+~~~bash
 pip install -r requirements.txt
+~~~
 
-4. **Execute a aplicação**
+4. Execute a aplicação
+~~~bash
 streamlit run main.py
+~~~
