@@ -7,6 +7,8 @@ Uma aplicação web interativa desenvolvida em Python com Streamlit para auxilia
 
 Uma aplicação web interativa desenvolvida em Python com Streamlit para auxiliar no planejamento financeiro pessoal, oferecendo 4 calculadoras especializadas com visualizações gráficas avançadas.
 
+🔗 **[Acesse a aplicação online](https://calculadora-financeira.streamlit.app/)**
+
 [Sobre](#-sobre) • [Funcionalidades](#-funcionalidades) • [Tecnologias](#-tecnologias) • [Instalação](#-instalação) 
 
 </div>
@@ -106,3 +108,4 @@ pip install -r requirements.txt
 ~~~bash
 streamlit run main.py
 ~~~
+
