@@ -1,4 +1,6 @@
 import streamlit as st
+import streamlit_antd_components as sac
+
 from utils import (
     calcular_juros_compostos,
     calcular_emprestimo,
@@ -36,27 +38,27 @@ st.markdown("""
 # Título principal
 st.markdown('<h1 class="main-header">💰 Calculadora Financeira Completa</h1>', unsafe_allow_html=True)
 
-# Sidebar para seleção de calculadora
-st.sidebar.title("📊 Menu")
-calculadora = st.sidebar.selectbox(
-    "Escolha a Calculadora:",
-    ["Juros Compostos", "Empréstimos e Financiamentos", "Planejamento de Aposentadoria", "Calculadora FI/RE"]
-)
+calculadora = sac.tabs([
+    sac.TabsItem(label='Juros Compostos'),
+    sac.TabsItem(label='Empréstimos e Financiamentos'),
+    sac.TabsItem(label='Planejamento de Aposentadoria'),
+    sac.TabsItem(label='Calculadora FI/RE'),
+], align='center')
 
-# Roteamento para as calculadoras
-if calculadora == "Juros Compostos":
-    calcular_juros_compostos()
-elif calculadora == "Empréstimos e Financiamentos":
-    calcular_emprestimo()
-elif calculadora == "Planejamento de Aposentadoria":
-    calcular_aposentadoria()
-else:  
-    calcular_fire()
+match calculadora:
+    case "Juros Compostos":
+        calcular_juros_compostos()
+    case "Empréstimos e Financiamentos":
+        calcular_emprestimo()
+    case "Planejamento de Aposentadoria":
+        calcular_aposentadoria()
+    case "Calculadora FI/RE":
+        calcular_fire()
 
 # Footer
 st.markdown("---")
 st.markdown("""
     <div style='text-align: center; color: #666; padding: 2rem 0;'>
-        <p style='font-size: 0.8rem;'>⚠️ Esta ferramenta é apenas para fins educacionais. Consulte um profissional certificado para decisões financeiras importantes. ⚠️</p>
+        <p style='font-size: 1.1rem;'>⚠️ Esta ferramenta é apenas para fins educacionais. Consulte um profissional certificado para decisões financeiras importantes. ⚠️</p>
     </div>
 """, unsafe_allow_html=True)
